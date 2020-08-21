@@ -1,0 +1,17 @@
+.p_center {
+  align-content: center;
+}
+
+.padding_size90 {
+  height: 90px;
+}
+
+.grayBack {
+  z-index: 0;
+  background-color: #c0bfbf;
+}
+
+.whiteBack {
+  z-index: 1;
+  background-color: white;
+}

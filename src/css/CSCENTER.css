@@ -1,0 +1,55 @@
+.padding_size40 {
+  height: 40px;
+}
+
+.line {
+  height: 1px;
+  background-color: #f5eedd;
+}
+
+.blue_box {
+  width: 27px;
+  height: 79px;
+  background-color: #004987;
+}
+
+.flex_box {
+  align-items: center;
+  flex-direction: row;
+  display: flex;
+}
+.flex_box_around {
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  display: flex;
+}
+
+.cs_title {
+  margin: 10px;
+  font-size: 24px;
+}
+
+.cs_title2 {
+  font-size: 18px;
+  color: #004992;
+}
+
+.sub_title {
+  font-size: 22px;
+  color: #004992;
+}
+
+.cs_content {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.grid {
+  background-color: #f6dfa4;
+}
+
+.centerbox {
+  text-align: center;
+  justify-content: center;
+}

@@ -1,0 +1,58 @@
+.banner {
+  width: auto;
+  height: auto;
+}
+
+.padding_size90 {
+  height: 90px;
+}
+
+.grid_imgs {
+  width: 100%;
+  height: auto;
+}
+
+.about_font {
+  font-size: 24px;
+  font-style: oblique;
+  text-align: center;
+}
+
+.about_icon_font_title_left {
+  font-size: 24px;
+  font-style: oblique;
+  text-align: left;
+}
+
+.about_icon_font_title_right {
+  font-size: 24px;
+  font-style: oblique;
+  text-align: right;
+}
+
+.about_icon_font_left {
+  font-size: 18px;
+  font-style: oblique;
+  text-align: left;
+}
+
+.about_icon_font_right {
+  font-size: 18px;
+  font-style: oblique;
+  text-align: right;
+}
+
+.bot_background {
+  background-color: #f6dfa4;
+}
+
+.about_contact {
+  font-size: 24px;
+  font-style: oblique;
+  text-align: center;
+}
+
+.send_btn {
+  display: flex;
+  justify-content: center;
+}

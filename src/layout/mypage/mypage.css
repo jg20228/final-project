@@ -1,0 +1,46 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  /*이렇게 까지 하면 기본적으로 모든 요소들이 가지는 padding, margin 값이 어느 정도 있는데 그걸 0으로 없애 준다*/
+  box-sizing: border-box;
+  /*만약 뭔가를 고정 px로 만들 때 저절로 뭔가와 padding, margin 값을 포함해서 내가 원하는 크기로 만들어 준다.*/
+}
+/* .main {
+    background-color: cornflowerblue;
+  } */
+.test {
+  text-decoration: none;
+  color: black;
+}
+
+.list li {
+  list-style-type: none;
+  font-size: medium;
+}
+.profile {
+  display: inline;
+}
+
+.line {
+  display: inline;
+  background-color: lightgray;
+  width: 1px;
+}
+.bold {
+  font-weight: bold;
+  font-size: x-large;
+}
+.box {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.boxcardtable {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+.member {
+  font-size: larger;
+}
+.fontsmall {
+  font-size: small;
+}

@@ -1,0 +1,21 @@
+.padding_size45 {
+  height: 45px;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.inline {
+  display: inline;
+}
+
+.padding_size10W {
+  width: 10px;
+}
+
+.flex_center {
+  display: flex;
+  justify-content: center;
+}
