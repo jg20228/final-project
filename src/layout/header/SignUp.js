@@ -57,7 +57,7 @@ export default function SignIn() {
           <LockOutlinedIcon />
         </Avatar>
         <Typography component="h1" variant="h5">
-          Sign in
+          Sign up
         </Typography>
         <form className={classes.form} noValidate>
           <TextField
@@ -76,16 +76,90 @@ export default function SignIn() {
             margin="normal"
             required
             fullWidth
+            id="username"
+            label="username"
+            name="username"
+            autoComplete="username"
+            autoFocus
+          />
+          <TextField
+            variant="outlined"
+            margin="normal"
+            required
+            fullWidth
             name="password"
             label="Password"
             type="password"
             id="password"
             autoComplete="current-password"
           />
-          <FormControlLabel
-            control={<Checkbox value="remember" color="primary" />}
-            label="Remember me"
+          <TextField
+            variant="outlined"
+            margin="normal"
+            required
+            fullWidth
+            id="name"
+            label="name"
+            name="name"
+            autoComplete="name"
+            autoFocus
           />
+          <TextField
+            variant="outlined"
+            margin="normal"
+            required
+            fullWidth
+            id="gender"
+            label="gender"
+            name="gender"
+            autoComplete="gender"
+            autoFocus
+          />
+          <TextField
+            variant="outlined"
+            margin="normal"
+            required
+            fullWidth
+            id="phone"
+            label="phone"
+            name="phone"
+            autoComplete="phone"
+            autoFocus
+          />
+          <TextField
+            variant="outlined"
+            margin="normal"
+            required
+            fullWidth
+            id="address"
+            label="address"
+            name="address"
+            autoComplete="address"
+            autoFocus
+          />
+          <TextField
+            variant="outlined"
+            margin="normal"
+            required
+            fullWidth
+            id="detail_address"
+            label="detail_address"
+            name="detail_address"
+            autoComplete="detail_address"
+            autoFocus
+          />
+          <TextField
+            variant="outlined"
+            margin="normal"
+            required
+            fullWidth
+            id="birthday"
+            label="birthday"
+            name="birthday"
+            autoComplete="birthday"
+            autoFocus
+          />
+
           <Button
             type="submit"
             fullWidth
@@ -93,20 +167,8 @@ export default function SignIn() {
             color="primary"
             className={classes.submit}
           >
-            Sign In
+            Sign UP
           </Button>
-          <Grid container>
-            <Grid item xs>
-              <Link href="#" variant="body2">
-                Forgot password?
-              </Link>
-            </Grid>
-            <Grid item>
-              <Link href="#" variant="body2">
-                {"Don't have an account? Sign Up"}
-              </Link>
-            </Grid>
-          </Grid>
         </form>
       </div>
       <Box mt={8}>

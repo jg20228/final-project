@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "./layout/include/Header";
 import SignIn from "./layout/header/SignIn";
+import SignUp from "./layout/header/SignUp";
 import Payment from "./layout/header/Payment";
 import Unit from "./layout/header/Shop";
 import About from "./layout/header/About";
@@ -14,8 +15,9 @@ function App() {
   return (
     <div>
       <Header />
-      <SignIn />
       <Payment />
+      <SignIn />
+      <SignUp />
       <br />
       <Route path="/shop" component={Unit} />
       <Route path="/about" component={About} />
