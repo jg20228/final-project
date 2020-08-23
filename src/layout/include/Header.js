@@ -22,6 +22,22 @@ const Header = () => {
       <Link to="/cart">
         <p>Cart</p>
       </Link>
+
+      <Link to="/mypage">
+        <p>mypage</p>
+      </Link>
+
+      <Link to="/signin">
+        <p>signin</p>
+      </Link>
+
+      <Link to="/signup">
+        <p>signup</p>
+      </Link>
+
+      <Link to="/payment">
+        <p>payment</p>
+      </Link>
     </div>
   );
 };

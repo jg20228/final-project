@@ -15,17 +15,17 @@ function App() {
   return (
     <div>
       <Header />
-      <Payment />
-      <SignIn />
-      <SignUp />
       <br />
       <Route path="/shop" component={Unit} />
       <Route path="/about" component={About} />
       <Route path="/review" component={Review} />
       <Route path="/cscenter" component={CSCENTER} />
-      <Route path="/mypage" component={Mypage} /> {/* myPage */}
       <Route path="/cart" component={Cart} />
       {/* myPage */}
+      <Route path="/mypage" component={Mypage} />
+      <Route path="/signin" component={SignIn} />
+      <Route path="/signup" component={SignUp} />
+      <Route path="/payment" component={Payment} />
       <Route path="/mypage/wish" component={Cart} />
       <Route path="/mypage/cancle" component={Cart} />
       <Route path="/mypage/coupon" component={Cart} />
