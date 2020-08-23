@@ -1,0 +1,23 @@
+.header {
+  height: 150px;
+  background-color: #004987;
+}
+
+.header p {
+  color: aliceblue;
+  margin-top: 10px;
+  margin-right: 20px;
+}
+
+.padding_box {
+  width: 100%;
+  height: 15px;
+}
+
+.head_img {
+  width: 100%;
+}
+
+.header_box {
+  display: flex;
+}

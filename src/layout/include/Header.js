@@ -1,44 +1,75 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Grid } from "@material-ui/core";
+import styles from "../../css/Header.css";
+import aboutA from "../../img/header.png";
 
 const Header = () => {
   return (
-    <div>
-      <Link to="/shop">
-        <p>SHOP </p>
-      </Link>
-      <Link to="/about">
-        <p>ABOUT </p>
-      </Link>
-      <Link to="/review">
-        <p>REVIEW </p>
-      </Link>
-      <Link to="/cscenter">
-        <p>CS CENTER </p>
-      </Link>
-      <Link to="/mypage">
-        <p>My Page </p>
-      </Link>
-      <Link to="/cart">
-        <p>Cart</p>
-      </Link>
+    <Grid container className="header">
+      <div className="padding_box"></div>
+      <div className="header_box">
+        <Grid item xs={2}></Grid>
+        <Grid item xs={3}>
+          <div>
+            <Link to="/">
+              <img className="head_img" src={aboutA} alt="" />
+            </Link>
+          </div>
+        </Grid>
+        <Grid item xs={1}></Grid>
+        <Grid item xs={4}>
+          <Grid container>
+            <div className="header_box">
+              <Grid item xs={1}>
+                <Link to="/shop">
+                  <p>SHOP </p>
+                </Link>
+              </Grid>
+              <div>
+                <Link to="/about">
+                  <p>ABOUT </p>
+                </Link>
+              </div>
+              <div>
+                <Link to="/review">
+                  <p>REVIEW </p>
+                </Link>
+              </div>
+              <div>
+                <Link to="/cscenter">
+                  <p>CS_CENTER</p>
+                </Link>
+              </div>
+              <div>
+                <Link to="/mypage">
+                  <p>MyPage</p>
+                </Link>
+              </div>
+              <div>
+                <Link to="/cart">
+                  <p>Cart</p>
+                </Link>
+              </div>
+              <div>
+                <Link to="/signin">
+                  <p>signin</p>
+                </Link>
+              </div>
 
-      <Link to="/mypage">
-        <p>mypage</p>
-      </Link>
+              <Link to="/signup">
+                <p>signup</p>
+              </Link>
 
-      <Link to="/signin">
-        <p>signin</p>
-      </Link>
-
-      <Link to="/signup">
-        <p>signup</p>
-      </Link>
-
-      <Link to="/payment">
-        <p>payment</p>
-      </Link>
-    </div>
+              <Link to="/payment">
+                <p>payment</p>
+              </Link>
+            </div>
+          </Grid>
+        </Grid>
+      </div>
+      <Grid item xs={2}></Grid>
+    </Grid>
   );
 };
 

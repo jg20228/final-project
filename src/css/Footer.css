@@ -1,0 +1,36 @@
+.footer {
+  background-color: #004987;
+}
+
+.foot_img {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 200px;
+}
+
+.padding_inline {
+  display: flex;
+}
+
+.padding {
+  width: 100px;
+  height: 100%;
+}
+
+.padding_height {
+  height: 30px;
+}
+
+.pre {
+  color: aliceblue;
+}
+
+.test {
+  text-decoration: none;
+}
+
+.footer_ico {
+  color: black;
+  width: 100px;
+}

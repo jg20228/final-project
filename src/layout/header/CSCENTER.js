@@ -33,20 +33,16 @@ const CSCENTER = () => {
           <Grid item xs={12}>
             <CSCENTER1st />
           </Grid>
-          {/*  */}
           <Grid item xs={12} className="grid">
             <CSCENTER2nd />
           </Grid>
-          {/*  */}
           <Grid item xs={12}>
             <CSCENTER3rd />
           </Grid>
-          {/*  */}
           <Grid item xs={12} className="grid">
             <CSCENTER4th />
           </Grid>
         </Grid>
-        {/*  */}
         <Grid item xs={12} className="padding_size40"></Grid>
         <Grid item xs={12} className="centerbox">
           추가로 궁금하신 점이 있으신가요?

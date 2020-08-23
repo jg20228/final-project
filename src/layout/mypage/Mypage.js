@@ -8,7 +8,6 @@ const Mypage = () => {
   return (
     <Grid container className="box">
       <Grid item xs={2}></Grid>
-
       <Grid item className="main" xs={8}>
         <Grid container>
           <Grid item className="" xs={2}>
@@ -16,7 +15,6 @@ const Mypage = () => {
               <Link className="test" to="/mypage">
                 <li>주문조회</li>
               </Link>
-
               <Link to="/mypage/wish">
                 <li>위시리스트</li>
               </Link>
