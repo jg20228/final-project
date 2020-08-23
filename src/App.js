@@ -12,13 +12,14 @@ import Review from "./layout/header/Review";
 import CSCENTER from "./layout/header/CSCENTER";
 import Mypage from "./layout/mypage/Mypage";
 import Home from "./layout/Home";
+import Banner from "./layout/Banner";
 
 function App() {
   return (
     <div>
       <Header />
       <br />
-      <Route path="/" component={Home} />
+      <Route exact path="/" component={Home} />
       <Route path="/shop" component={Unit} />
       <Route path="/about" component={About} />
       <Route path="/review" component={Review} />
