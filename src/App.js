@@ -18,7 +18,6 @@ function App() {
   return (
     <div>
       <Header />
-      <br />
       <Route exact path="/" component={Home} />
       <Route path="/shop" component={Unit} />
       <Route path="/about" component={About} />

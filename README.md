@@ -1,17 +1,26 @@
 # React
 
+- npm install
+- 오류가 나면 밑에 명령어 참고
 - yarn add axios
 - yarn add react-router-dom
 - yarn add @material-ui/core
 - yarn add @material-ui/icons
-- npm install
+- yarn add react-slick
+- yarn add nuka-carousel
 
-##
+## 참고
 
 - Material_UI
   Link: [Material_UI]][https://material-ui.com/]
 
-## index.html에 추가
+- react-slick
+  Link: [react-slick]][https://github.com/akiran/react-slick]
+
+- react-slick
+  Link: [nuka-carousel]][https://github.com/FormidableLabs/nuka-carousel]
+
+## index.html에 추가한 link들
 
 ```html
 <link
@@ -23,14 +32,7 @@
   rel="stylesheet"
   href="https://fonts.googleapis.com/icon?family=Material+Icons"
 />
-```
 
-## 추가 예정 (카르셀)
-
-- https://github.com/akiran/react-slick
-- npm install slick-carousel
-
-```html
 <link
   rel="stylesheet"
   type="text/css"
