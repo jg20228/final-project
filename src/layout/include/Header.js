@@ -57,7 +57,7 @@ const Header = () => {
                 </Link>
               </div>
 
-              <Link to="/signup">
+              <Link onClick={() => window.scrollTo(0, 0)} to="/signup">
                 <p>signup</p>
               </Link>
 

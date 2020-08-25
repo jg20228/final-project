@@ -28,19 +28,44 @@ export default function SimpleBreadcrumbs() {
               <div className="padding_height"></div>
               <div className="link_div">
                 <Breadcrumbs aria-label="breadcrumb">
-                  <Link className="test" color="inherit" to="/about">
+                  <Link
+                    onClick={() => window.scrollTo(0, 0)}
+                    className="test"
+                    color="inherit"
+                    to="/about"
+                  >
                     회사소개
                   </Link>
-                  <Link className="test" color="inherit" to="/">
+                  <Link
+                    onClick={() => window.scrollTo(0, 0)}
+                    className="test"
+                    color="inherit"
+                    to="/"
+                  >
                     동물실험정책
                   </Link>
-                  <Link className="test" color="inherit" to="/">
+                  <Link
+                    onClick={() => window.scrollTo(0, 0)}
+                    className="test"
+                    color="inherit"
+                    to="/"
+                  >
                     개인정보처리방침
                   </Link>
-                  <Link className="test" color="inherit" to="/">
+                  <Link
+                    onClick={() => window.scrollTo(0, 0)}
+                    className="test"
+                    color="inherit"
+                    to="/"
+                  >
                     이용약관
                   </Link>
-                  <Link className="test" color="inherit" to="/cscenter">
+                  <Link
+                    onClick={() => window.scrollTo(0, 0)}
+                    className="test"
+                    color="inherit"
+                    to="/cscenter"
+                  >
                     고객센터
                   </Link>
                 </Breadcrumbs>
