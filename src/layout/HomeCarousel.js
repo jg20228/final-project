@@ -13,20 +13,29 @@ export default class extends React.Component {
     homeCarousel: [
       {
         id: "",
-        title: "",
         thumb: "",
+        title: "",
         price: "",
-        disc: "",
+        discounted: "",
+        sale: "",
+        newly: "",
+        best: "",
       },
     ],
   };
 
   componentDidMount() {
+    const { homeCarousel } = this.state;
+    console.log(this.state);
     console.log("componentDidMount");
-    Axios.get("http://192.168.0.103:8080/list2")
+    Axios.get("http://localhost:8080/list2")
       // 응답(성공)
       .then(function (response) {
-        console.log(response);
+        console.log(response.data);
+        this.setState({
+          title: response.data.title,
+        });
+        console.log(this.state);
       })
       // 응답(실패)
       .catch(function (error) {
@@ -37,16 +46,6 @@ export default class extends React.Component {
         // ...
       });
   }
-
-  handleCreate = (data) => {
-    const { homeCarousel } = this.state;
-    this.setState({
-      homeCarousel: homeCarousel.concat({
-        ...data,
-      }),
-    });
-    console.log("123214124" + this.state);
-  };
 
   render() {
     return (
