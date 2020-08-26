@@ -1,0 +1,24 @@
+.product_img {
+  width: 100%;
+  height: 500px;
+  background-color: skyblue;
+}
+
+.product_flex {
+  display: flex;
+}
+
+.review_flex {
+  display: flex;
+}
+
+.qna_flex {
+  display: flex;
+}
+
+.review_button {
+  text-align: right;
+}
+.widthpadding {
+  width: 5px;
+}

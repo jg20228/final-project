@@ -14,11 +14,32 @@ import Mypage from "./layout/mypage/Mypage";
 import Home from "./layout/Home";
 import Banner from "./layout/Banner";
 import Test from "./test/Test";
+import Detail from "./layout/details/product/Detail";
 
 function App() {
   return (
     <div>
-      <Test></Test>
+      <Header />
+      <Route exact path="/" component={Home} />
+      <Route exact path="/shop" component={Unit} />
+      <Route path="/about" component={About} />
+      <Route path="/review" component={Review} />
+      <Route path="/cscenter" component={CSCENTER} />
+      <Route path="/cart" component={Cart} />
+      <Route path="/shop/detail" component={Detail} />
+      {/* myPage */}
+      <Route path="/mypage" component={Mypage} />
+      <Route path="/signin" component={SignIn} />
+      <Route path="/signup" component={SignUp} />
+      <Route path="/payment" component={Payment} />
+      <Route path="/mypage/wish" component={Cart} />
+      <Route path="/mypage/cancle" component={Cart} />
+      <Route path="/mypage/coupon" component={Cart} />
+      <Route path="/mypage/point" component={Cart} />
+      <Route path="/mypage/qna" component={Cart} />
+      <Route path="/mypage/edit" component={Cart} />
+      <Route path="/mypage/exit" component={Cart} />
+      <Footer />
     </div>
   );
 }

@@ -64,6 +64,10 @@ const Header = () => {
               <Link to="/payment">
                 <p>payment</p>
               </Link>
+
+              <Link to="/shop/detail">
+                <p>detail</p>
+              </Link>
             </div>
           </Grid>
         </Grid>
