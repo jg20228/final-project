@@ -15,6 +15,13 @@ import Home from "./layout/Home";
 import Banner from "./layout/Banner";
 import Test from "./test/Test";
 import Detail from "./layout/details/product/Detail";
+import WishList from "./layout/mypage/WishList";
+import Cancle from "./layout/mypage/Cancle";
+import QnA from "./layout/mypage/QnA";
+import Point from "./layout/mypage/Point";
+import Exit from "./layout/mypage/Exit";
+import Coupon from "./layout/mypage/Coupon";
+import Edit from "./layout/mypage/Edit";
 
 function App() {
   return (
@@ -28,17 +35,17 @@ function App() {
       <Route path="/cart" component={Cart} />
       <Route path="/shop/detail" component={Detail} />
       {/* myPage */}
-      <Route path="/mypage" component={Mypage} />
       <Route path="/signin" component={SignIn} />
       <Route path="/signup" component={SignUp} />
       <Route path="/payment" component={Payment} />
-      <Route path="/mypage/wish" component={Cart} />
-      <Route path="/mypage/cancle" component={Cart} />
-      <Route path="/mypage/coupon" component={Cart} />
-      <Route path="/mypage/point" component={Cart} />
-      <Route path="/mypage/qna" component={Cart} />
-      <Route path="/mypage/edit" component={Cart} />
-      <Route path="/mypage/exit" component={Cart} />
+      <Route exact path="/mypage" component={Mypage} />
+      <Route path="/mypage/wish" component={WishList} />
+      <Route path="/mypage/cancle" component={Cancle} />
+      <Route path="/mypage/coupon" component={Coupon} />
+      <Route path="/mypage/point" component={Point} />
+      <Route path="/mypage/qna" component={QnA} />
+      <Route path="/mypage/edit" component={Edit} />
+      <Route path="/mypage/exit" component={Exit} />
       <Footer />
     </div>
   );

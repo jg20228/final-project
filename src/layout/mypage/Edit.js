@@ -1,11 +1,10 @@
 import React from "react";
-import { Grid } from "@material-ui/core";
 import MypageTable from "./MypageTable";
-import styles from "./mypage.css";
+import { Grid } from "@material-ui/core";
 import Side from "./Side";
 import MypageHeader from "./MypageHeader";
 
-const Mypage = () => {
+const Edit = () => {
   return (
     <Grid container className="box">
       <Grid item xs={2}></Grid>
@@ -29,4 +28,4 @@ const Mypage = () => {
   );
 };
 
-export default Mypage;
+export default Edit;

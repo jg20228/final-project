@@ -19,11 +19,13 @@ const Detail = () => {
               <div className="product_img"></div>
               <div className="product_flex">
                 <div className="product_title">제목입니다.</div>
+                <div className="widthpadding"></div>
                 <div className="product_status">상태들입니다.</div>
               </div>
               <div className="padding60px"></div>
               <div className="product_flex">
                 <div className="product_discounted">할인가</div>
+                <div className="widthpadding"></div>
                 <div className="product_price">진짜가격</div>
               </div>
               <div className="disc">설명입니다.</div>
