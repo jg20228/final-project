@@ -1,9 +1,9 @@
 import React from "react";
-import aboutA from "../../img2/banner.jpg";
-import aboutB from "../../img2/ban2.jpg";
-import aboutC from "../../img2/icon1.jpg";
-import aboutD from "../../img2/icon2.jpg";
-import aboutE from "../../img2/icon3.jpg";
+import aboutA from "../images/img2/banner.jpg";
+import aboutB from "../images/img2/ban2.jpg";
+import aboutC from "../images/img2/icon1.jpg";
+import aboutD from "../images/img2/icon2.jpg";
+import aboutE from "../images/img2/icon3.jpg";
 import {
   Grid,
   FormControl,
@@ -15,7 +15,7 @@ import {
   TextareaAutosize,
   Button,
 } from "@material-ui/core";
-import styles from "../../css/About.css";
+import styles from "../css/About.css";
 import Axios from "axios";
 
 const useStyles = makeStyles((theme) => ({

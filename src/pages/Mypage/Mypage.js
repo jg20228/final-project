@@ -1,7 +1,7 @@
 import React from "react";
 import { Grid } from "@material-ui/core";
 import MypageTable from "./MypageTable";
-import styles from "./mypage.css";
+import styles from "../../css/mypage.css";
 import Side from "./Side";
 import MypageHeader from "./MypageHeader";
 

@@ -1,7 +1,7 @@
 import React from "react";
 import Slider from "react-slick";
-import imgA from "../homeimg/main_review1.jpg";
-import imgB from "../homeimg/main_review2.jpg";
+import imgA from "../images/homeimg/main_review1.jpg";
+import imgB from "../images/homeimg/main_review2.jpg";
 import styles from "../css/Product.css";
 import { Grid } from "@material-ui/core";
 

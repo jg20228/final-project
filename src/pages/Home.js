@@ -1,14 +1,14 @@
 import React from "react";
-import Banner from "./Banner";
-import HomeCarousel from "./HomeCarousel";
+import Banner from "../components/Banner";
+import HomeCarousel from "../components/HomeCarousel";
 import styles from "../css/home.css";
-import Product from "./Product";
-import Review from "./Review";
+import Product from "../components/Product";
+import Review from "../components/Review";
 import { FormHelperText, Grid } from "@material-ui/core";
-import imgA from "../homeimg/bot_img_event.jpg";
-import imgB from "../homeimg/bot_img_review.gif";
-import imgC from "../homeimg/bot_left_img1.jpg";
-import imgD from "../homeimg/bot_top_img1.jpg";
+import imgA from "../images/homeimg/bot_img_event.jpg";
+import imgB from "../images/homeimg/bot_img_review.gif";
+import imgC from "../images/homeimg/bot_left_img1.jpg";
+import imgD from "../images/homeimg/bot_top_img1.jpg";
 
 const Home = () => {
   return (

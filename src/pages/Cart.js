@@ -1,8 +1,8 @@
 import React from "react";
 import { Grid, Button } from "@material-ui/core";
 import Checkbox from "@material-ui/core/Checkbox";
-import CartTable from "./CartTable";
-import styles from "../../css/Cart.css";
+import CartTable from "../components/Body/CartTable";
+import styles from "../css/Cart.css";
 
 const Cart = () => {
   return (

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import shopB from "../../img/shopbanner.jpg";
-import shop_item from "../../img/shop_item.gif";
+import shopB from "../images/img/shopbanner.jpg";
+import shop_item from "../images/img/shop_item.gif";
 import Grid from "@material-ui/core/Grid";
 
-import styles from "../../css/Shop.css";
+import styles from "../css/Shop.css";
 import Axios from "axios";
 
 const test = async () => {

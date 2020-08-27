@@ -1,8 +1,8 @@
 import React from "react";
 import { Grid } from "@material-ui/core";
-import reviewA from "../../img3/review_banner.jpg";
-import styles from "../../css/Review.css";
-import TableTest from "./TableTest";
+import reviewA from "../images/img3/review_banner.jpg";
+import styles from "../css/Review.css";
+import TableTest from "../components/TableTest";
 
 const Review = () => {
   return (

@@ -1,11 +1,11 @@
 import React from "react";
 import { Grid, Button } from "@material-ui/core";
-import styles from "../../../css/Details.css";
-import DetailQnATable from "./DetailQnATable.js";
+import styles from "../css/Details.css";
+import DetailQnATable from "../components/DetailQnATable.js";
 import PhotoIcon from "@material-ui/icons/Photo";
 import StarIcon from "@material-ui/icons/Star";
 import StarBorderIcon from "@material-ui/icons/StarBorder";
-import Product from "../../Product";
+import Product from "../components/Product";
 
 const Detail = () => {
   return (

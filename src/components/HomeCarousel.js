@@ -1,11 +1,11 @@
 import React from "react";
 import Carousel from "nuka-carousel";
-import imgA from "../homeimg/main1.jpg";
-import imgB from "../homeimg/main2.jpg";
-import imgC from "../homeimg/main3.jpg";
-import imgD from "../homeimg/main4.jpg";
-import imgE from "../homeimg/main5.jpg";
-import imgF from "../homeimg/main6.jpg";
+import imgA from "../images/homeimg/main1.jpg";
+import imgB from "../images/homeimg/main2.jpg";
+import imgC from "../images/homeimg/main3.jpg";
+import imgD from "../images/homeimg/main4.jpg";
+import imgE from "../images/homeimg/main5.jpg";
+import imgF from "../images/homeimg/main6.jpg";
 import Axios from "axios";
 
 export default class extends React.Component {

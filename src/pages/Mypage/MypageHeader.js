@@ -1,6 +1,6 @@
 import React from "react";
 import { Grid } from "@material-ui/core";
-import imgA from "../../img4/userProfile.png";
+import imgA from "../../images/img4/userProfile.png";
 
 const MypageHeader = () => {
   return (

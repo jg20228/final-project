@@ -1,12 +1,12 @@
 import React from "react";
 import { Grid, Button } from "@material-ui/core";
-import aboutA from "../../img4/banner.jpg";
-import CSCENTER_BUTTON from "./CSCENTER_BUTTON";
-import styles from "../../css/CSCENTER.css";
-import CSCENTER1st from "./CSCENTER1st";
-import CSCENTER2nd from "./CSCENTER2nd";
-import CSCENTER3rd from "./CSCENTER3rd";
-import CSCENTER4th from "./CSCENTER4th";
+import aboutA from "../images/img4/banner.jpg";
+import CSCENTER_BUTTON from "../components/Body/CSCENTER_BUTTON";
+import styles from "../css/CSCENTER.css";
+import CSCENTER1st from "../components/Body/CSCENTER1st";
+import CSCENTER2nd from "../components/Body/CSCENTER2nd";
+import CSCENTER3rd from "../components/Body/CSCENTER3rd";
+import CSCENTER4th from "../components/Body/CSCENTER4th";
 
 const CSCENTER = () => {
   return (

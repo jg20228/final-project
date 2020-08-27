@@ -1,6 +1,6 @@
 import React from "react";
 import { Grid, Breadcrumbs, Typography } from "@material-ui/core";
-import aboutA from "../../img/footer.png";
+import aboutA from "../../images/img/footer.png";
 import styles from "../../css/Footer.css";
 import { Link } from "react-router-dom";
 import ChatBubbleOutlineIcon from "@material-ui/icons/ChatBubbleOutline";
@@ -40,7 +40,7 @@ export default function SimpleBreadcrumbs() {
                     onClick={() => window.scrollTo(0, 0)}
                     className="test"
                     color="inherit"
-                    to="/"
+                    to="/animal"
                   >
                     동물실험정책
                   </Link>
@@ -48,7 +48,7 @@ export default function SimpleBreadcrumbs() {
                     onClick={() => window.scrollTo(0, 0)}
                     className="test"
                     color="inherit"
-                    to="/"
+                    to="/pp"
                   >
                     개인정보처리방침
                   </Link>
@@ -56,7 +56,7 @@ export default function SimpleBreadcrumbs() {
                     onClick={() => window.scrollTo(0, 0)}
                     className="test"
                     color="inherit"
-                    to="/"
+                    to="/tos"
                   >
                     이용약관
                   </Link>

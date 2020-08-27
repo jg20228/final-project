@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Grid } from "@material-ui/core";
 import styles from "../../css/Header.css";
-import aboutA from "../../img/header.png";
+import aboutA from "../../images/img/header.png";
 
 const Header = () => {
   return (

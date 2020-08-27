@@ -1,8 +1,8 @@
 import React from "react";
 import Carousel from "nuka-carousel";
-import imgA from "../homeimg/bannerimg1.jpg";
-import imgB from "../homeimg/bannerimg2.jpg";
-import imgC from "../homeimg/bannerimg3.jpg";
+import imgA from "../images/homeimg/bannerimg1.jpg";
+import imgB from "../images/homeimg/bannerimg2.jpg";
+import imgC from "../images/homeimg/bannerimg3.jpg";
 
 const Banner = () => {
   return (
