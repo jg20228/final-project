@@ -16,6 +16,7 @@ import {
   Button,
 } from "@material-ui/core";
 import styles from "../../css/About.css";
+import Axios from "axios";
 
 const useStyles = makeStyles((theme) => ({
   formControl: {
@@ -34,6 +35,19 @@ const useStyles = makeStyles((theme) => ({
     maxHeight: 100,
   },
 }));
+
+const sendMSG = async () => {
+  Axios.post("http://localhost:8080/testboard", {
+    firstName: "Fred",
+    lastName: "Flintstone",
+  })
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+};
 
 const About = () => {
   const classes = useStyles();
@@ -201,6 +215,7 @@ const About = () => {
                         variant="contained"
                         color="primary"
                         href="#contained-buttons"
+                        onClick={sendMSG}
                       >
                         SEND
                       </Button>

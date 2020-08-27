@@ -1,5 +1,6 @@
 import React from "react";
 import { Grid } from "@material-ui/core";
+import imgA from "../../img4/userProfile.png";
 
 const MypageHeader = () => {
   return (
@@ -7,7 +8,7 @@ const MypageHeader = () => {
       <Grid item xs={5} className="profile">
         <Grid container>
           <Grid item xs={3}>
-            사진
+            <img src={imgA} alt="" />
           </Grid>
           <Grid item xs={9}>
             <p className="member">김성수님 안녕하세요. </p>
