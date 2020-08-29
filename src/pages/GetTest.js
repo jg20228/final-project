@@ -1,6 +1,6 @@
-import React, { Component } from "react";
+import React from "react";
 import Axios from "axios";
-import src from "*.bmp";
+import { Component } from "react";
 
 class GetTest extends Component {
   constructor(props) {
@@ -11,7 +11,7 @@ class GetTest extends Component {
   }
 
   getData = () => {
-    Axios.get("http://192.168.0.25:8080/test/1")
+    Axios.get("http://192.168.0.25:8080/test/product/8")
       .then((res) => {
         return this.setState({ data: res.data });
       })
@@ -25,9 +25,7 @@ class GetTest extends Component {
     const { data } = this.state;
     return (
       <div>
-        {data.map((product) => (
-          <img src={data.thumb} alt="" />
-        ))}
+        <img src={"http://192.168.0.25:8080" + data.thumb} alt="" />
       </div>
     );
   }

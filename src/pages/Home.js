@@ -1,16 +1,35 @@
-import React from "react";
-import Banner from "../components/Banner";
-import HomeCarousel from "../components/HomeCarousel";
+import React, { useEffect, useState } from "react";
+import Banner from "../components/Home/Banner";
+import HomeCarousel from "../components/Home/HomeCarousel";
 import styles from "../css/home.css";
-import Product from "../components/Product";
-import Review from "../components/Review";
+import Product from "../components/Home/Product";
+import Review from "../components/Home/Review";
 import { FormHelperText, Grid } from "@material-ui/core";
 import imgA from "../images/homeimg/bot_img_event.jpg";
 import imgB from "../images/homeimg/bot_img_review.gif";
 import imgC from "../images/homeimg/bot_left_img1.jpg";
 import imgD from "../images/homeimg/bot_top_img1.jpg";
+import MainService from "../service/MainService";
+import Axios from "axios";
 
 const Home = () => {
+  const [carousel, setCarousel] = useState(0);
+  const [banner, setBanner] = useState(0);
+  const [product, setProduct] = useState(0);
+  const [review, setReview] = useState(0);
+
+  useEffect(() => {
+    console.log("useEffect");
+    MainService.fetchHome()
+      .then((res) => {
+        setCarousel({ data: res.data.homeAdResoDto });
+        setBanner({ data: res.data.homeNoticeRespDto });
+        setProduct({ data: res.data.homeProductRespDto });
+        setReview({ data: res.data.homeReviewRespDto });
+      })
+      .catch((res) => console.log(res));
+    console.log("         ddddd                 ");
+  });
   return (
     <div>
       <HomeCarousel />

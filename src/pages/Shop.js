@@ -7,7 +7,7 @@ import styles from "../css/Shop.css";
 import Axios from "axios";
 
 const test = async () => {
-  let testData = await Axios("http://192.168.0.103:8989/test/index");
+  let testData = await Axios("http://192.168.0.25:8080/");
   console.log(testData);
 };
 

@@ -5,7 +5,7 @@ import DetailQnATable from "../components/DetailQnATable.js";
 import PhotoIcon from "@material-ui/icons/Photo";
 import StarIcon from "@material-ui/icons/Star";
 import StarBorderIcon from "@material-ui/icons/StarBorder";
-import Product from "../components/Product";
+import Product from "../components/Home/Product";
 
 const Detail = () => {
   return (
