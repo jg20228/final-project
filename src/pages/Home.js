@@ -15,17 +15,20 @@ import Axios from "axios";
 class Homeopy extends Component {
   state = {
     carousels: [],
+    banner: [],
+    products: [],
+    reviews: [],
   };
 
   // API 호출 함수 -당연히 바로 디비 접근 못함.
   getPosts = async () => {
     console.log("!(!");
     let res = await MainService.fetchHome();
-    console.log(res.data.homeAdResoDto);
+    console.log(res.data.homeReviewRespDto);
     this.setState({ carousels: res.data.homeAdResoDto });
-    //setBanner({ data: res.data.homeNoticeRespDto });
-    //setProduct({ data: res.data.homeProductRespDto });
-    //setReview({ data: res.data.homeReviewRespDto });
+    this.setState({ banner: res.data.homeNoticeRespDto });
+    this.setState({ products: res.data.homeProductRespDto });
+    this.setState({ reviews: res.data.homeReviewRespDto });
     console.log("!)");
   };
 
@@ -34,7 +37,10 @@ class Homeopy extends Component {
   }
 
   render() {
-    let { carousels } = this.state; //구조 분할 할당 const라서 한번만됨.
+    let { carousels } = this.state;
+    let { banner } = this.state;
+    let { products } = this.state;
+    let { reviews } = this.state;
     console.log("렌더링전");
     console.log(carousels);
     return (
@@ -44,7 +50,7 @@ class Homeopy extends Component {
         <Grid container>
           <Grid item xs={2}></Grid>
           <Grid item xs={8}>
-            <Banner />
+            <Banner banner={banner} />
             <p>아르아르는 생활용품 안전의 새로운 기준을 만들어 갑니다.</p>
             <div className="padding80px"></div>
             <Grid container>
@@ -53,12 +59,12 @@ class Homeopy extends Component {
               <Grid item xs={5}>
                 <div className="padding80px"></div>
                 <p>Product</p>
-                <Product />
+                <Product products={products} />
               </Grid>
               <Grid item xs={1}></Grid>
 
               <Grid item xs={5}>
-                <Review />
+                <Review reviews={reviews} />
               </Grid>
             </Grid>
             <Grid container>

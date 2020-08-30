@@ -18,7 +18,7 @@ class HomeCarousel extends Component {
         height={800}
       >
         {carousels.map((carousel) => (
-          <div>
+          <div key={carousel.id}>
             <Link to={"/shop/detail/" + carousel.id} className="img__">
               <img src={MainService.imgRoot() + carousel.bgimg} alt="" />
             </Link>

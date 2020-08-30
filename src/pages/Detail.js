@@ -7,7 +7,8 @@ import StarIcon from "@material-ui/icons/Star";
 import StarBorderIcon from "@material-ui/icons/StarBorder";
 import Product from "../components/Home/Product";
 
-const Detail = () => {
+const Detail = (match) => {
+  console.log(match.id);
   return (
     <div>
       <Grid container>
@@ -110,7 +111,7 @@ const Detail = () => {
           <hr />
           {/* Q&A */}
           <div className="qna_flex">
-            <div>Q&A</div>
+            <div>QnA</div>
             <div className="widthpadding"></div>
             <div>count</div>
           </div>
@@ -144,9 +145,7 @@ const Detail = () => {
             </Grid>
           </div>
           <div>Related Products</div>
-          <div>
-            <Product />
-          </div>
+          <div>{/*  */}</div>
         </Grid>
         <Grid item xs={2}></Grid>
       </Grid>
