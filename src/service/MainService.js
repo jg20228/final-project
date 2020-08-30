@@ -1,11 +1,17 @@
 import axios from "axios";
 
-const MAIN_API_BASE_URL = "http://192.168.0.25:8080";
+const MAIN_API_BASE_URL = "http://localhost:8080";
+
+//미리 넣어둔 데이터 경로
+const IMG_BASE_URL = "http://localhost:8080";
 
 class MainService {
+  //img 경로 리턴
+  imgRoot() {
+    return IMG_BASE_URL;
+  }
   //HOME페이지
   fetchHome() {
-    console.log("HOME");
     return axios.get(MAIN_API_BASE_URL + "");
   }
   //SHOP페이지
