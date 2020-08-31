@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import shopB from "../images/img/shopbanner.jpg";
 import shop_item from "../images/img/shop_item.gif";
 import Grid from "@material-ui/core/Grid";
@@ -6,16 +6,20 @@ import Grid from "@material-ui/core/Grid";
 import styles from "../css/Shop.css";
 import Axios from "axios";
 import MainService from "../service/MainService";
-
-const test = async () => {
-  let shopData = await MainService.fetchShop();
-  console.log(shopData.data);
-};
+import { Link } from "react-router-dom";
 
 const Unit = () => {
-  test();
-  const { banner } = shopData;
-  console.log("shop");
+  const [shopData, setShopData] = useState([]);
+  const test = async () => {
+    console.log("shop1");
+    let res = await MainService.fetchShop();
+    setShopData(res.data);
+  };
+
+  useEffect(() => {
+    test();
+  }, []);
+
   return (
     <Grid container>
       <Grid item xs={2}></Grid>
@@ -45,17 +49,18 @@ const Unit = () => {
       <Grid item xs={2}></Grid>
       <Grid item xs={8}>
         <Grid container>
-          <Grid item xs={4}>
-            <img className="mainBody" src={shop_item} alt="" />
-          </Grid>
-
-          <Grid item xs={4}>
-            <img className="mainBody" src={shop_item} alt="" />
-          </Grid>
-
-          <Grid item xs={4}>
-            <img className="mainBody" src={shop_item} alt="" />
-          </Grid>
+          {shopData.map((item) => (
+            <Grid item xs={4} key={item.id}>
+              <Link to={"/shop/detail/" + item.id}>
+                <img
+                  className="img__"
+                  src={MainService.imgRoot() + item.thumb}
+                  alt=""
+                />
+              </Link>
+              <p>{item.price}</p>
+            </Grid>
+          ))}
         </Grid>
       </Grid>
       <Grid item xs={2}></Grid>
