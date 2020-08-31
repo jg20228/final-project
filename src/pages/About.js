@@ -37,9 +37,9 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const sendMSG = async () => {
-  Axios.post("http://localhost:8080/testboard", {
-    firstName: "Fred",
-    lastName: "Flintstone",
+  Axios.post("http://localhost:8080/about", {
+    title: "테스트",
+    content: "test1",
   })
     .then(function (response) {
       console.log(response);

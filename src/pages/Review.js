@@ -1,10 +1,23 @@
-import React from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { Grid } from "@material-ui/core";
 import reviewA from "../images/img3/review_banner.jpg";
 import styles from "../css/Review.css";
-import TableTest from "../components/TableTest";
+import ReviewTable from "../components/ReviewTable";
+import MainService from "../service/MainService";
 
 const Review = () => {
+  const [reviewData, setReviewData] = useState([]);
+  const test = async () => {
+    console.log("fetchReview");
+    let res = await MainService.fetchReview();
+    setReviewData(res.data);
+    console.log(res.data);
+  };
+
+  useEffect(() => {
+    test();
+  }, []);
+
   return (
     <Grid container>
       <Grid item xs={2}>
@@ -40,7 +53,7 @@ const Review = () => {
           </Grid>
 
           <Grid item xs={12}>
-            <TableTest />
+            <ReviewTable reviewData={reviewData} />
           </Grid>
 
           <Grid item xs={12}>

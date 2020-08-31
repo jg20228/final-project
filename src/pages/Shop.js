@@ -49,18 +49,23 @@ const Unit = () => {
       <Grid item xs={2}></Grid>
       <Grid item xs={8}>
         <Grid container>
-          {shopData.map((item) => (
-            <Grid item xs={4} key={item.id}>
-              <Link to={"/shop/detail/" + item.id}>
-                <img
-                  className="img__"
-                  src={MainService.imgRoot() + item.thumb}
-                  alt=""
-                />
-              </Link>
-              <p>{item.price}</p>
-            </Grid>
-          ))}
+          {shopData.map((item) => {
+            if (item.categoryId === 1) {
+              return (
+                <Grid item xs={4} key={item.id}>
+                  <Link to={"/shop/detail/" + item.id}>
+                    <img
+                      className="img__"
+                      src={MainService.imgRoot() + item.thumb}
+                      alt=""
+                    />
+                  </Link>
+                  <p>{item.price}</p>
+                </Grid>
+              );
+            }
+            return null;
+          })}
         </Grid>
       </Grid>
       <Grid item xs={2}></Grid>
@@ -83,19 +88,27 @@ const Unit = () => {
       <Grid item xs={2}></Grid>
 
       <Grid item xs={2}></Grid>
-
-      <Grid item xs={3}>
-        <img className="mainBody" src={shop_item} alt="" />
+      <Grid item xs={8}>
+        <Grid container>
+          {shopData.map((item) => {
+            if (item.categoryId === 2) {
+              return (
+                <Grid item xs={4} key={item.id}>
+                  <Link to={"/shop/detail/" + item.id}>
+                    <img
+                      className="img__"
+                      src={MainService.imgRoot() + item.thumb}
+                      alt=""
+                    />
+                  </Link>
+                  <p>{item.price}</p>
+                </Grid>
+              );
+            }
+            return null;
+          })}
+        </Grid>
       </Grid>
-
-      <Grid item xs={3}>
-        <img className="mainBody" src={shop_item} alt="" />
-      </Grid>
-
-      <Grid item xs={3}>
-        <img className="mainBody" src={shop_item} alt="" />
-      </Grid>
-
       <Grid item xs={2}></Grid>
     </Grid>
   );
