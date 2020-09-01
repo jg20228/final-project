@@ -1,46 +1,47 @@
 import axios from "axios";
 
-const MYPAGE_API_BASE_URL = "http://192.168.0.25:8080/shop_mypage";
+const MYPAGE_API_BASE_URL = "http://localhost:8080/shop_mypage/";
+//const MYPAGE_API_BASE_URL = "http://192.168.0.25:8080/shop_mypage/";
 
 class MyPageService {
   mypageOrder(userId) {
     console.log("myPageOrder");
-    return axios.post(MYPAGE_API_BASE_URL + "/order/" + userId);
+    return axios.post(MYPAGE_API_BASE_URL + userId + "/order");
   }
 
   mypageWish(userId) {
     console.log("myPageWishList");
-    return axios.post(MYPAGE_API_BASE_URL + "/wish_list/" + userId);
+    return axios.post(MYPAGE_API_BASE_URL + userId + "/wish_list");
   }
 
-  mypageCart(userId) {
+  mypageCancle(userId) {
     console.log("myPageCart");
-    return axios.post(MYPAGE_API_BASE_URL + "/cancle/" + userId);
+    return axios.post(MYPAGE_API_BASE_URL + userId + "/cancle");
   }
 
   mypageCoupon(userId) {
     console.log("myPageCancle");
-    return axios.post(MYPAGE_API_BASE_URL + "/coupon/" + userId);
+    return axios.post(MYPAGE_API_BASE_URL + userId + "/coupon");
   }
 
   mypagePoint(userId) {
     console.log("mypagePoint");
-    return axios.post(MYPAGE_API_BASE_URL + "/point/" + userId);
+    return axios.post(MYPAGE_API_BASE_URL + userId + "/point");
   }
 
   mypageQnA(userId) {
     console.log("mypageQnA");
-    return axios.post(MYPAGE_API_BASE_URL + "/qna/" + userId);
+    return axios.post(MYPAGE_API_BASE_URL + userId + "/qna");
   }
 
   mypageUpdate(userId) {
     console.log("mypageUpdate");
-    return axios.post(MYPAGE_API_BASE_URL + "/update/" + userId);
+    return axios.post(MYPAGE_API_BASE_URL + userId + "/update");
   }
 
   mypageWithdrawal(userId) {
     console.log("mypageWithdrawal");
-    return axios.post(MYPAGE_API_BASE_URL + "/withdrawal/" + userId);
+    return axios.post(MYPAGE_API_BASE_URL + userId + "/withdrawal");
   }
 }
 

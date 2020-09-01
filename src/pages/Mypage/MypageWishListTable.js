@@ -7,6 +7,8 @@ import TableContainer from "@material-ui/core/TableContainer";
 import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
+import MainService from "../../service/MainService";
+import styles from "../../css/Img.css";
 
 const TAX_RATE = 0.07;
 
@@ -44,8 +46,8 @@ const invoiceTaxes = TAX_RATE * invoiceSubtotal;
 const invoiceTotal = invoiceTaxes + invoiceSubtotal;
 
 const MypageTable = (props) => {
-  let items = props.mypageData;
-  console.log(items);
+  let items = props.wishListData;
+  console.log(props);
   const classes = useStyles();
 
   return (
@@ -53,40 +55,33 @@ const MypageTable = (props) => {
       <Table className={classes.table} aria-label="spanning table">
         <TableHead>
           <TableRow>
-            <TableCell>구매날짜</TableCell>
-            <TableCell align="right">TotalPrice</TableCell>
-            <TableCell align="right">구매방법</TableCell>
-            <TableCell align="right">상태</TableCell>
-            <TableCell align="right">이름</TableCell>
+            <TableCell>사진</TableCell>
+            <TableCell align="center">이름</TableCell>
+            <TableCell align="right">가격</TableCell>
+            <TableCell align="right">할인가</TableCell>
+            <TableCell align="right">세일</TableCell>
+            <TableCell align="right">신상</TableCell>
+            <TableCell align="right">최고</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {items.map((row) => (
             <TableRow key={row.id}>
-              <TableCell>{row.orderDate}</TableCell>
-              <TableCell align="right">{row.totalPrice}</TableCell>
-              <TableCell align="right">{row.howToPay}</TableCell>
-              <TableCell align="right">{row.stats}</TableCell>
+              <TableCell>
+                <img
+                  className="img___"
+                  src={MainService.imgRoot() + row.thumb}
+                  alt=""
+                />
+              </TableCell>
               <TableCell align="right">{row.title}</TableCell>
+              <TableCell align="right">{row.price}</TableCell>
+              <TableCell align="right">{row.discounted}</TableCell>
+              <TableCell align="right">{row.sale}</TableCell>
+              <TableCell align="right">{row.newly}</TableCell>
+              <TableCell align="right">{row.best}</TableCell>
             </TableRow>
           ))}
-
-          <TableRow>
-            <TableCell rowSpan={3} />
-            <TableCell colSpan={2}>Subtotal</TableCell>
-            <TableCell align="right">{ccyFormat(invoiceSubtotal)}</TableCell>
-          </TableRow>
-          <TableRow>
-            <TableCell>Tax</TableCell>
-            <TableCell align="right">{`${(TAX_RATE * 100).toFixed(
-              0
-            )} %`}</TableCell>
-            <TableCell align="right">{ccyFormat(invoiceTaxes)}</TableCell>
-          </TableRow>
-          <TableRow>
-            <TableCell colSpan={2}>Total</TableCell>
-            <TableCell align="right">{ccyFormat(invoiceTotal)}</TableCell>
-          </TableRow>
         </TableBody>
       </Table>
     </TableContainer>

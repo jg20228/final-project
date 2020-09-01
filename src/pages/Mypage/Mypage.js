@@ -1,11 +1,24 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Grid } from "@material-ui/core";
 import MypageTable from "./MypageTable";
 import styles from "../../css/mypage.css";
 import Side from "./Side";
 import MypageHeader from "./MypageHeader";
+import MyPageService from "../../service/MyPageService";
 
 const Mypage = () => {
+  const [mypageData, setMypageData] = useState([]);
+  const test = async () => {
+    console.log("mypageOrder");
+    let res = await MyPageService.mypageOrder(2);
+    setMypageData(res.data);
+    console.log(res.data);
+  };
+
+  useEffect(() => {
+    test();
+  }, []);
+
   return (
     <Grid container className="box">
       <Grid item xs={2}></Grid>
@@ -18,7 +31,7 @@ const Mypage = () => {
             <MypageHeader />
             <Grid container className="boxcardtable">
               <Grid item>
-                <MypageTable />
+                <MypageTable mypageData={mypageData} />
               </Grid>
             </Grid>
           </Grid>

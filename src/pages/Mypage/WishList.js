@@ -1,10 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import MypageHeader from "./MypageHeader";
 import Side from "./Side";
 import { Grid } from "@material-ui/core";
-import MypageTable from "./MypageTable";
+import MypageWishListTable from "./MypageWishListTable";
+import MyPageService from "../../service/MyPageService";
 
 const WishList = () => {
+  const [wishListData, setWishListData] = useState([]);
+  const test = async () => {
+    console.log("mypageWish");
+    let res = await MyPageService.mypageWish(2);
+    setWishListData(res.data);
+    console.log(res.data);
+  };
+
+  useEffect(() => {
+    test();
+  }, []);
   return (
     <Grid container className="box">
       <Grid item xs={2}></Grid>
@@ -17,7 +29,7 @@ const WishList = () => {
             <MypageHeader />
             <Grid container className="boxcardtable">
               <Grid item>
-                <MypageTable />
+                <MypageWishListTable wishListData={wishListData} />
               </Grid>
             </Grid>
           </Grid>
