@@ -11,8 +11,8 @@ const Mypage = () => {
   const test = async () => {
     console.log("mypageOrder");
     let res = await MyPageService.mypageOrder(2);
-    setMypageData(res);
-    console.log(res);
+    setMypageData(res.data);
+    console.log(res.data);
   };
 
   useEffect(() => {
@@ -31,7 +31,7 @@ const Mypage = () => {
             <MypageHeader />
             <Grid container className="boxcardtable">
               <Grid item>
-                <MypageTable />
+                <MypageTable mypageData={mypageData} />
               </Grid>
             </Grid>
           </Grid>

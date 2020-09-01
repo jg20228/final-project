@@ -48,31 +48,27 @@ const useStyles = makeStyles({
   },
 });
 
-export default function CustomizedTables() {
+function NoticeBoard(props) {
   const classes = useStyles();
+  let items = props.myNotice;
+  console.log(items);
 
   return (
     <TableContainer component={Paper}>
       <Table className={classes.table} aria-label="customized table">
         <TableHead>
           <TableRow>
-            <StyledTableCell>상품명</StyledTableCell>
-            <StyledTableCell align="right">제목</StyledTableCell>
-            <StyledTableCell align="right">글쓴이</StyledTableCell>
+            <StyledTableCell>제목</StyledTableCell>
             <StyledTableCell align="right">작성시간</StyledTableCell>
-            <StyledTableCell align="right">평점</StyledTableCell>
+            <StyledTableCell align="right">조회수</StyledTableCell>
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map((row) => (
-            <StyledTableRow key={row.name}>
-              <StyledTableCell component="th" scope="row">
-                {row.name}
-              </StyledTableCell>
-              <StyledTableCell align="right">{row.calories}</StyledTableCell>
-              <StyledTableCell align="right">{row.fat}</StyledTableCell>
-              <StyledTableCell align="right">{row.carbs}</StyledTableCell>
-              <StyledTableCell align="right">{row.protein}</StyledTableCell>
+          {items.map((row) => (
+            <StyledTableRow key={row.id}>
+              <StyledTableCell>{row.title}</StyledTableCell>
+              <StyledTableCell align="right">{row.createDate}</StyledTableCell>
+              <StyledTableCell align="right">{row.readCount}</StyledTableCell>
             </StyledTableRow>
           ))}
         </TableBody>
@@ -80,3 +76,5 @@ export default function CustomizedTables() {
     </TableContainer>
   );
 }
+
+export default NoticeBoard;

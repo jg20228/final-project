@@ -1,10 +1,22 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Grid } from "@material-ui/core";
 import Side from "./Side";
 import MypageHeader from "./MypageHeader";
-import MypageTable from "./MypageTable";
+import MypageCouponTable from "./MypageCouponTable";
+import MyPageService from "../../service/MyPageService";
 
 const Coupon = () => {
+  const [mypageCoupon, setMypageCoupon] = useState([]);
+  const test = async () => {
+    console.log("mypageCoupon");
+    let res = await MyPageService.mypageCoupon(2);
+    setMypageCoupon(res.data);
+    console.log(res.data);
+  };
+
+  useEffect(() => {
+    test();
+  }, []);
   return (
     <Grid container className="box">
       <Grid item xs={2}></Grid>
@@ -17,7 +29,7 @@ const Coupon = () => {
             <MypageHeader />
             <Grid container className="boxcardtable">
               <Grid item>
-                <MypageTable />
+                <MypageCouponTable mypageCoupon={mypageCoupon} />
               </Grid>
             </Grid>
           </Grid>

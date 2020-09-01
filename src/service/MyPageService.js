@@ -1,6 +1,7 @@
 import axios from "axios";
 
 const MYPAGE_API_BASE_URL = "http://localhost:8080/shop_mypage/";
+//const MYPAGE_API_BASE_URL = "http://192.168.0.25:8080/shop_mypage/";
 
 class MyPageService {
   mypageOrder(userId) {
@@ -13,7 +14,7 @@ class MyPageService {
     return axios.post(MYPAGE_API_BASE_URL + userId + "/wish_list");
   }
 
-  mypageCart(userId) {
+  mypageCancle(userId) {
     console.log("myPageCart");
     return axios.post(MYPAGE_API_BASE_URL + userId + "/cancle");
   }

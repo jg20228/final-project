@@ -1,11 +1,11 @@
 import axios from "axios";
 
-const MAIN_API_BASE_URL = "http://localhost:8080";
-//const MAIN_API_BASE_URL = "http://192.168.0.103:8080";
+//const MAIN_API_BASE_URL = "http://localhost:8080";
+const MAIN_API_BASE_URL = "http://192.168.0.25:8080";
 
 //미리 넣어둔 데이터 경로
-const IMG_BASE_URL = "http://localhost:8080";
-//const IMG_BASE_URL = "http://192.168.0.103:8080";
+//const IMG_BASE_URL = "http://localhost:8080";
+const IMG_BASE_URL = "http://192.168.0.25:8080";
 
 class MainService {
   //about 테이블 insert

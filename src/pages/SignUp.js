@@ -9,6 +9,7 @@ import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
+import Axios from "axios";
 
 function Copyright() {
   return (
@@ -16,9 +17,8 @@ function Copyright() {
       {"Copyright © "}
       <Link color="inherit" href="https://material-ui.com/">
         Your Website
-      </Link>{" "}
+      </Link>
       {new Date().getFullYear()}
-      {"."}
     </Typography>
   );
 }
@@ -42,6 +42,27 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(3, 0, 2),
   },
 }));
+
+const sendMSG = async () => {
+  console.log("ddd");
+  Axios.post("http://localhost:8080/join", {
+    username: "cos",
+    password: "1234",
+    email: "cos@nate.com",
+    name: "코스",
+    gender: "남",
+    phone: "010-1234-1234",
+    address: "서면",
+    detail_address: "지하상가",
+    birthday: "10001111",
+  })
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+};
 
 export default function SignIn() {
   const classes = useStyles();
@@ -158,7 +179,8 @@ export default function SignIn() {
           />
 
           <Button
-            type="submit"
+            onClick={sendMSG}
+            type="button"
             fullWidth
             variant="contained"
             color="primary"

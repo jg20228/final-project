@@ -7,6 +7,8 @@ import TableContainer from "@material-ui/core/TableContainer";
 import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
+import MainService from "../../service/MainService";
+import styles from "../../css/Img.css";
 
 const TAX_RATE = 0.07;
 
@@ -44,7 +46,7 @@ const invoiceTaxes = TAX_RATE * invoiceSubtotal;
 const invoiceTotal = invoiceTaxes + invoiceSubtotal;
 
 const MypageTable = (props) => {
-  let items = props.mypageData;
+  let items = props.mypagePoint;
   console.log(items);
   const classes = useStyles();
 
@@ -53,41 +55,19 @@ const MypageTable = (props) => {
       <Table className={classes.table} aria-label="spanning table">
         <TableHead>
           <TableRow>
-            <TableCell>구매날짜</TableCell>
-            <TableCell align="right">TotalPrice</TableCell>
-            <TableCell align="right">구매방법</TableCell>
-            <TableCell align="right">상태</TableCell>
-            <TableCell align="right">이름</TableCell>
+            <TableCell align="right">사용시간</TableCell>
+            <TableCell align="right">이유</TableCell>
+            <TableCell align="right">포인트</TableCell>
           </TableRow>
         </TableHead>
-        <TableBody>
-          {items.map((row) => (
-            <TableRow key={row.id}>
-              <TableCell>{row.orderDate}</TableCell>
-              <TableCell align="right">{row.totalPrice}</TableCell>
-              <TableCell align="right">{row.howToPay}</TableCell>
-              <TableCell align="right">{row.stats}</TableCell>
-              <TableCell align="right">{row.title}</TableCell>
-            </TableRow>
-          ))}
-
-          <TableRow>
-            <TableCell rowSpan={3} />
-            <TableCell colSpan={2}>Subtotal</TableCell>
-            <TableCell align="right">{ccyFormat(invoiceSubtotal)}</TableCell>
+        {items.map((row) => (
+          <TableRow key={row.id}>
+            <TableCell align="right">{row.historyDate}</TableCell>
+            <TableCell align="right">{row.reason}</TableCell>
+            <TableCell align="right">{row.point}</TableCell>
           </TableRow>
-          <TableRow>
-            <TableCell>Tax</TableCell>
-            <TableCell align="right">{`${(TAX_RATE * 100).toFixed(
-              0
-            )} %`}</TableCell>
-            <TableCell align="right">{ccyFormat(invoiceTaxes)}</TableCell>
-          </TableRow>
-          <TableRow>
-            <TableCell colSpan={2}>Total</TableCell>
-            <TableCell align="right">{ccyFormat(invoiceTotal)}</TableCell>
-          </TableRow>
-        </TableBody>
+        ))}
+        <TableBody></TableBody>
       </Table>
     </TableContainer>
   );
