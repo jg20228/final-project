@@ -33,12 +33,6 @@ class Review extends React.Component {
             <p>{item.price}</p>
           </div>
         ))}
-        <div>
-          <img className="rv_img" src={imgA} alt="" />
-        </div>
-        <div>
-          <img className="rv_img" src={imgB} alt="" />
-        </div>
       </Slider>
     );
   }

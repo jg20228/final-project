@@ -1,11 +1,18 @@
 import axios from "axios";
 
 const MAIN_API_BASE_URL = "http://localhost:8080";
+//const MAIN_API_BASE_URL = "http://192.168.0.103:8080";
 
 //미리 넣어둔 데이터 경로
 const IMG_BASE_URL = "http://localhost:8080";
+//const IMG_BASE_URL = "http://192.168.0.103:8080";
 
 class MainService {
+  //about 테이블 insert
+  aboutPost(data) {
+    return axios.post(MAIN_API_BASE_URL + "/about", data);
+  }
+
   //img 경로 리턴
   imgRoot() {
     return IMG_BASE_URL;
