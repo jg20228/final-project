@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
 import CssBaseline from "@material-ui/core/CssBaseline";
@@ -17,7 +17,7 @@ function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
       {"Copyright © "}
-      <Link color="inherit" href="https://material-ui.com/">
+      <Link color="inherit" href="http://localhost:3000/">
         Your Website
       </Link>
       {new Date().getFullYear()}
@@ -47,6 +47,21 @@ const useStyles = makeStyles((theme) => ({
 
 export default function SignIn() {
   const classes = useStyles();
+  const [user, setUser] = useState({
+    username: "",
+    password: "",
+  });
+
+  const handleValueChange = (e) => {
+    console.log(e.target);
+    const { value, name } = e.target;
+    setUser({
+      ...user,
+      [name]: value,
+    });
+  };
+
+  const { username, password } = user;
 
   return (
     <Container component="main" maxWidth="xs">
@@ -80,6 +95,8 @@ export default function SignIn() {
             type="password"
             id="password"
             autoComplete="current-password"
+            onKeyUp={handleValueChange}
+            value={password}
           />
           <FormControlLabel
             control={<Checkbox value="remember" color="primary" />}
