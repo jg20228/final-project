@@ -10,7 +10,8 @@ const Mypage = () => {
   const [mypageData, setMypageData] = useState([]);
   const test = async () => {
     console.log("mypageOrder");
-    let res = await MyPageService.mypageOrder(2);
+    //id값 수정
+    let res = await MyPageService.mypageOrder(1);
     setMypageData(res.data);
     console.log(res.data);
   };

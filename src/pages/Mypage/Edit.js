@@ -16,9 +16,7 @@ const Edit = () => {
           <Grid item className="content" xs={10}>
             <MypageHeader />
             <Grid container className="boxcardtable">
-              <Grid item>
-                <MypageTable />
-              </Grid>
+              <Grid item></Grid>
             </Grid>
           </Grid>
         </Grid>
