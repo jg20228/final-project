@@ -9,7 +9,7 @@ const Coupon = () => {
   const [mypageCoupon, setMypageCoupon] = useState([]);
   const test = async () => {
     console.log("mypageCoupon");
-    let res = await MyPageService.mypageCoupon(2);
+    let res = await MyPageService.mypageCoupon(3);
     setMypageCoupon(res.data);
     console.log(res.data);
   };

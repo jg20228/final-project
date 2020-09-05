@@ -29,6 +29,7 @@ class Homeopy extends Component {
     this.setState({ banner: res.data.homeNoticeRespDto });
     this.setState({ products: res.data.homeProductRespDto });
     this.setState({ reviews: res.data.homeReviewRespDto });
+    console.log(this.state);
     console.log("!)");
   };
 

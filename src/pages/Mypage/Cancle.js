@@ -9,7 +9,8 @@ const Cancle = () => {
   const [mypageCancle, setMypageCancle] = useState([]);
   const test = async () => {
     console.log("mypageCancle");
-    let res = await MyPageService.mypageCancle(2);
+    //
+    let res = await MyPageService.mypageCancle(1);
     setMypageCancle(res.data);
     console.log(res.data);
   };
