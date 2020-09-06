@@ -3,6 +3,12 @@ import axios from "axios";
 const REVIEW_API_BASE_URL = "http://localhost:8080/review";
 //const REVIEW_API_BASE_URL = "http://192.168.0.28:8080/review";
 
+const config = {
+  headers: {
+    Authorization: "Bearer " + localStorage.getItem("jwtToken"),
+  },
+};
+
 class ReviewService {
   //리뷰 게시판 이동
   fetchReview() {
@@ -18,18 +24,18 @@ class ReviewService {
   //리뷰 등록
   insertReview() {
     console.log("insertReview");
-    return axios.post(REVIEW_API_BASE_URL);
+    return axios.post(REVIEW_API_BASE_URL, "data", config);
   }
 
   //리뷰 수정
   updateReview() {
     console.log("updateReview");
-    return axios.put(REVIEW_API_BASE_URL);
+    return axios.put(REVIEW_API_BASE_URL, "data", config);
   }
 
   //리뷰 삭제
   deleteReview(reviewId) {
-    return axios.delete(REVIEW_API_BASE_URL + "/" + reviewId);
+    return axios.delete(REVIEW_API_BASE_URL + "/" + reviewId, "data", config);
   }
 }
 

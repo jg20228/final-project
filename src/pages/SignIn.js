@@ -12,6 +12,7 @@ import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
+import MainService from "../service/MainService";
 
 function Copyright() {
   return (
@@ -53,12 +54,17 @@ export default function SignIn() {
   });
 
   const handleValueChange = (e) => {
-    console.log(e.target);
     const { value, name } = e.target;
+    console.log(value);
     setUser({
       ...user,
       [name]: value,
     });
+  };
+
+  const signup = () => {
+    let data = user;
+    let res = MainService.login(data);
   };
 
   const { username, password } = user;
@@ -79,10 +85,11 @@ export default function SignIn() {
             margin="normal"
             required
             fullWidth
-            id="email"
-            label="Email Address"
-            name="email"
-            autoComplete="email"
+            id="username"
+            label="Username"
+            name="username"
+            autoComplete="username"
+            onChange={handleValueChange}
             autoFocus
           />
           <TextField
@@ -95,7 +102,7 @@ export default function SignIn() {
             type="password"
             id="password"
             autoComplete="current-password"
-            onKeyUp={handleValueChange}
+            onChange={handleValueChange}
             value={password}
           />
           <FormControlLabel
@@ -103,11 +110,12 @@ export default function SignIn() {
             label="Remember me"
           />
           <Button
-            type="submit"
+            type="button"
             fullWidth
             variant="contained"
             color="primary"
             className={classes.submit}
+            onClick={signup}
           >
             Sign In
           </Button>

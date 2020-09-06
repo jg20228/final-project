@@ -1,4 +1,5 @@
 import axios from "axios";
+import { Router } from "react-router-dom";
 
 const MAIN_API_BASE_URL = "http://localhost:8080";
 //const MAIN_API_BASE_URL = "http://192.168.0.103:8080";
@@ -17,10 +18,18 @@ class MainService {
   async login(data) {
     await axios({
       method: "post",
-      url: MAIN_API_BASE_URL + "/login",
+      url: MAIN_API_BASE_URL + "/oauth/jwt/common",
       data: data,
     }).then((response) => {
       console.log(response);
+      if (response.status === 200) {
+        //링크,바디,헤더(config-객체을 만들어서 담으면 됨)
+        console.log(2, response.data);
+        //웹 브라우저 localStorage에 저장 (나만의 static 공간)
+        localStorage.setItem("jwtToken", response.data);
+        document.location.href = "/";
+        //alert("로그인 성공");
+      }
     });
     return;
   }

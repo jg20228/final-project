@@ -10,7 +10,7 @@ const WishList = () => {
   const [wishListData, setWishListData] = useState([]);
   const test = async () => {
     console.log("mypageWish");
-    let res = await Axios.get(
+    let res = await Axios.post(
       "http://localhost:8080/shop_mypage/wish_list/" + "2"
     );
     setWishListData(res.data);

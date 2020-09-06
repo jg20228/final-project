@@ -36,9 +36,15 @@ const Detail = () => {
             <Grid item xs={3}></Grid>
             <Grid item xs={6}>
               <div className="product_img">
-                {details.detailProductRespDto == null
-                  ? "aa"
-                  : details.detailProductRespDto.thumb}
+                <img
+                  src={
+                    details.detailProductRespDto == null
+                      ? "aa"
+                      : MainService.imgRoot() +
+                        details.detailProductRespDto.thumb
+                  }
+                  alt=""
+                />
               </div>
               <div className="product_flex">
                 <div className="product_title">
@@ -124,7 +130,7 @@ const Detail = () => {
                 </Button>
               </div>
               <hr />
-              <div className="review_flex">
+              <div>
                 {details.detailProductRespDto == null
                   ? "aa"
                   : details.detailReviewRespDto.map((row) => (
@@ -146,7 +152,10 @@ const Detail = () => {
                                 <div className="review_comment">
                                   댓글 내용입니다.
                                 </div>
-                                <div className="review_photo">{row.img}</div>
+                                <div className="review_photo">
+                                  {row.img}
+                                  <img src={row.img} alt="" />
+                                </div>
                               </div>
                             </Grid>
                             <Grid item xs={2}></Grid>
@@ -156,6 +165,7 @@ const Detail = () => {
                               <div className="howtopay">{row.howToPay}</div>
                             </Grid>
                           </div>
+                          <div className="heightpadding"></div>
                         </Grid>
                       </Grid>
                     ))}
