@@ -3,7 +3,7 @@ import { Grid } from "@material-ui/core";
 import MypageHeader from "./MypageHeader";
 import Side from "./Side";
 import MypageCancleTable from "./MypageCancleTable";
-import MyPageService from "../../service/MyPageService";
+import MyPageService from "../../service/mypage/MyPageService";
 
 const Cancle = () => {
   const [mypageCancle, setMypageCancle] = useState([]);

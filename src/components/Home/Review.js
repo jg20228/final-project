@@ -22,7 +22,6 @@ class Review extends React.Component {
       <Slider className="width" {...settings}>
         {reviews.map((item) => (
           <div key={item.id}>
-            {item.id}
             <Link to={"/shop/detail/" + item.id} className="img__">
               <img
                 className="rv_img"

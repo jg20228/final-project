@@ -3,13 +3,16 @@ import MypageHeader from "./MypageHeader";
 import Side from "./Side";
 import { Grid } from "@material-ui/core";
 import MypageWishListTable from "./MypageWishListTable";
-import MyPageService from "../../service/MyPageService";
+import WishListService from "../../service/mypage/WishListService";
+import Axios from "axios";
 
 const WishList = () => {
   const [wishListData, setWishListData] = useState([]);
   const test = async () => {
     console.log("mypageWish");
-    let res = await MyPageService.mypageWish(2);
+    let res = await Axios.get(
+      "http://localhost:8080/shop_mypage/wish_list/" + "2"
+    );
     setWishListData(res.data);
     console.log(res.data);
   };

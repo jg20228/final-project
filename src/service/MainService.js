@@ -1,20 +1,11 @@
 import axios from "axios";
 
-<<<<<<< HEAD
 const MAIN_API_BASE_URL = "http://localhost:8080";
 //const MAIN_API_BASE_URL = "http://192.168.0.103:8080";
 
 //미리 넣어둔 데이터 경로
 const IMG_BASE_URL = "http://localhost:8080";
 //const IMG_BASE_URL = "http://192.168.0.103:8080";
-=======
-//const MAIN_API_BASE_URL = "http://localhost:8080";
-const MAIN_API_BASE_URL = "http://192.168.0.28:8080";
-
-//미리 넣어둔 데이터 경로
-//const IMG_BASE_URL = "http://localhost:8080";
-const IMG_BASE_URL = "http://192.168.0.28:8080";
->>>>>>> 7512ce31847a473e0cd10088f0166e71376670a0
 
 class MainService {
   //detail
@@ -65,12 +56,6 @@ class MainService {
   fetchProductByID(productID) {
     console.log("fetchProductByID = ", productID);
     return axios.get(MAIN_API_BASE_URL + "/shop_view/" + productID);
-  }
-
-  //장바구니 화면
-  fetchCart(userID) {
-    console.log("shop_cart");
-    return axios.get(MAIN_API_BASE_URL + "/shop_cart/" + userID);
   }
 }
 

@@ -3,15 +3,15 @@ import { Grid } from "@material-ui/core";
 import reviewA from "../images/img3/review_banner.jpg";
 import styles from "../css/Review.css";
 import ReviewTable from "../components/ReviewTable";
-import MainService from "../service/MainService";
+import ReviewService from "../service/ReviewService";
+import Axios from "axios";
 
 const Review = () => {
   const [reviewData, setReviewData] = useState([]);
   const test = async () => {
     console.log("fetchReview");
-    let res = await MainService.fetchReview();
+    let res = await Axios.get("http://localhost:8080/review");
     setReviewData(res.data);
-    console.log(res.data);
   };
 
   useEffect(() => {

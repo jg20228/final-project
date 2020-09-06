@@ -4,7 +4,7 @@ import MypageTable from "./MypageTable";
 import styles from "../../css/mypage.css";
 import Side from "./Side";
 import MypageHeader from "./MypageHeader";
-import MyPageService from "../../service/MyPageService";
+import MyPageService from "../../service/mypage/MyPageService";
 
 const Mypage = () => {
   const [mypageData, setMypageData] = useState([]);

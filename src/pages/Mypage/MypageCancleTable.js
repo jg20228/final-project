@@ -63,7 +63,24 @@ const MypageTable = (props) => {
             <TableCell align="right">이름</TableCell>
           </TableRow>
         </TableHead>
-        <TableBody></TableBody>
+        <TableBody>
+          {items.map((row) => (
+            <TableRow key={row.id}>
+              <TableCell>
+                <img
+                  className="img___"
+                  src={MainService.imgRoot() + row.thumb}
+                  alt=""
+                />
+              </TableCell>
+              <TableCell align="right">{row.orderId}</TableCell>
+              <TableCell align="right">{row.productId}</TableCell>
+              <TableCell align="right">{row.quantity}</TableCell>
+              <TableCell align="right">{row.stats}</TableCell>
+              <TableCell align="right">{row.title}</TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
       </Table>
     </TableContainer>
   );

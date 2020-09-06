@@ -3,7 +3,7 @@ import { Grid } from "@material-ui/core";
 import Side from "./Side";
 import MypageHeader from "./MypageHeader";
 import MypageCouponTable from "./MypageCouponTable";
-import MyPageService from "../../service/MyPageService";
+import MyPageService from "../../service/mypage/MyPageService";
 
 const Coupon = () => {
   const [mypageCoupon, setMypageCoupon] = useState([]);
