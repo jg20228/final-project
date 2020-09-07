@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const REVIEW_API_BASE_URL = "http://localhost:8080/review";
-//const REVIEW_API_BASE_URL = "http://192.168.0.28:8080/review";
+//const REVIEW_API_BASE_URL = "http://localhost:8080/review";
+const REVIEW_API_BASE_URL = "http://192.168.0.103:8080/review";
 
 const config = {
   headers: {

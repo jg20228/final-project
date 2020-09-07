@@ -1,7 +1,7 @@
 import Axios from "axios";
 
-const QNA_API_BASE_URL = "http://localhost:8080/qna";
-//const QNA_API_BASE_URL = "http://192.168.0.28:8080/qna";
+//const QNA_API_BASE_URL = "http://localhost:8080/qna";
+const QNA_API_BASE_URL = "http://192.168.0.103:8080/qna";
 
 const config = {
   headers: {

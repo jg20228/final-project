@@ -8,7 +8,8 @@ const Notice = () => {
   const [myNotice, setMyNotice] = useState([]);
   const test = async () => {
     console.log("mypageCoupon");
-    let res = await Axios.get("http://localhost:8080/notice");
+    //let res = await Axios.get("http://localhost:8080/notice");
+    let res = await Axios.get("http://192.168.0.103:8080/notice");
     setMyNotice(res.data);
     console.log(res.data);
   };

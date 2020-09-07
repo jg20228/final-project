@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const MYPAGE_API_BASE_URL = "http://localhost:8080/shop_mypage";
-//const MYPAGE_API_BASE_URL = "http://192.168.0.28:8080/shop_mypage";
+//const MYPAGE_API_BASE_URL = "http://localhost:8080/shop_mypage";
+const MYPAGE_API_BASE_URL = "http://192.168.0.103:8080/shop_mypage";
 const config = {
   headers: {
     Authorization: "Bearer " + localStorage.getItem("jwtToken"),

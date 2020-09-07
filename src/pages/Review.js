@@ -10,7 +10,8 @@ const Review = () => {
   const [reviewData, setReviewData] = useState([]);
   const test = async () => {
     console.log("fetchReview");
-    let res = await Axios.get("http://localhost:8080/review");
+    // let res = await Axios.get("http://localhost:8080/review");
+    let res = await Axios.get("http://192.168.0.103:8080/review");
     setReviewData(res.data);
   };
 

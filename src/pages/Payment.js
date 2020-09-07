@@ -1,6 +1,7 @@
 import React from "react";
 import { Grid, TextField } from "@material-ui/core";
 import styles from "../css/Payment.css";
+import Pay from "../components/Pay";
 
 const Payment = () => {
   return (
@@ -118,7 +119,7 @@ const Payment = () => {
                   4,020 포인트 적립예정
                 </Grid>
                 <Grid item xs={12}>
-                  결제하기 버튼
+                  <Pay />
                 </Grid>
               </Grid>
             </Grid>

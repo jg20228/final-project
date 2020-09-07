@@ -1,7 +1,7 @@
 import Axios from "axios";
 
-const WISH_API_BASE_URL = "http://localhost:8080/shop_mypage/wish_list";
-//const WISH_API_BASE_URL = "http://192.168.0.28:8080/shop_mypage/wish_list";
+//const WISH_API_BASE_URL = "http://localhost:8080/shop_mypage/wish_list";
+const WISH_API_BASE_URL = "http://192.168.0.103:8080/shop_mypage/wish_list";
 
 const config = {
   headers: {
