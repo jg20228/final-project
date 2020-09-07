@@ -1,10 +1,33 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Grid, Button } from "@material-ui/core";
 import Checkbox from "@material-ui/core/Checkbox";
 import CartTable from "../components/Body/CartTable";
 import styles from "../css/Cart.css";
+import CartService from "../service/CartService";
+import Axios from "axios";
 
 const Cart = () => {
+  const [cart, setCart] = useState([]);
+  const config = {
+    headers: {
+      Authorization: "Bearer " + localStorage.getItem("jwtToken"),
+    },
+  };
+  const test = async () => {
+    console.log(1, "detail페이지");
+    const res = await Axios.post(
+      "http://localhost:8080/shop_cart/" + "1",
+      "data",
+      config
+    );
+    console.log(res.data);
+    setCart(res.data);
+  };
+
+  useEffect(() => {
+    test();
+  }, []);
+
   return (
     <Grid container>
       <Grid item xs={2}></Grid>
@@ -15,7 +38,7 @@ const Cart = () => {
             <div className="padding_size10W"></div>
             <p>1</p>
           </div>
-          <CartTable />
+          <CartTable cart={cart} />
         </Grid>
         <div className="flex">
           <div className="flex">

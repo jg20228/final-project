@@ -3,13 +3,14 @@ import imgA from "../images/banner_notice.jpg";
 import NoticeBoard from "../components/NoticeBoard";
 import { Grid } from "@material-ui/core";
 import Axios from "axios";
+import styles from "../css/Shop.css";
 
 const Notice = () => {
   const [myNotice, setMyNotice] = useState([]);
   const test = async () => {
     console.log("mypageCoupon");
-    //let res = await Axios.get("http://localhost:8080/notice");
-    let res = await Axios.get("http://192.168.0.103:8080/notice");
+    let res = await Axios.get("http://localhost:8080/notice");
+    //let res = await Axios.get("http://192.168.0.103:8080/notice");
     setMyNotice(res.data);
     console.log(res.data);
   };
@@ -24,7 +25,7 @@ const Notice = () => {
         <Grid item xs={8}>
           <Grid container>
             <Grid item xs={12}>
-              <img src={imgA} alt="" />
+              <img className="img__" src={imgA} alt="" />
             </Grid>
             <Grid item xs={12}>
               <NoticeBoard myNotice={myNotice} />

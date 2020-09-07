@@ -1,7 +1,7 @@
 import Axios from "axios";
 
-//const CART_API_BASE_URL = "http://localhost:8080/shop_cart";
-const CART_API_BASE_URL = "http://192.168.0.103:8080/shop_cart";
+const CART_API_BASE_URL = "http://localhost:8080/shop_cart";
+//const CART_API_BASE_URL = "http://192.168.0.103:8080/shop_cart";
 
 const config = {
   headers: {
@@ -11,7 +11,7 @@ const config = {
 class CartService {
   //해당 유저의 쇼핑카트 보기
   cart(userId) {
-    console.log("insertCart");
+    console.log("cart");
     return Axios.post(CART_API_BASE_URL + "/" + userId, "data", config);
   }
 

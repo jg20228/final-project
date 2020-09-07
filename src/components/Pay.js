@@ -2,9 +2,9 @@ import React, { Component } from "react";
 
 function Pay() {
   function onClickPayment() {
-    /* 1. 가맹점 식별하기 */
-    const { IMP } = window;
+    const IMP = window.IMP; // 생략해도 괜찮습니다.
     IMP.init("imp86970325");
+    /* 1. 가맹점 식별하기 */
 
     /* 2. 결제 데이터 정의하기 */
     const data = {
