@@ -7,6 +7,8 @@ import StarIcon from "@material-ui/icons/Star";
 import StarBorderIcon from "@material-ui/icons/StarBorder";
 import MainService from "../service/MainService";
 import DetailRelatedProduct from "../components/Home/DetailRelatedProduct";
+import Pay from "../components/Pay";
+import Axios from "axios";
 
 const Detail = () => {
   const [details, setDetails] = useState({});
@@ -16,6 +18,20 @@ const Detail = () => {
     const res = await MainService.fetchDetail(1);
     console.log(res.data);
     setDetails(res.data);
+  };
+
+  const config = {
+    headers: {
+      Authorization: "Bearer " + localStorage.getItem("jwtToken"),
+    },
+  };
+
+  const cart = async (id) => {
+    const res = await Axios.post(
+      "http://localhost:8080/shop_cart/" + id,
+      "data",
+      config
+    );
   };
 
   useEffect(() => {
@@ -46,48 +62,70 @@ const Detail = () => {
                   alt=""
                 />
               </div>
-              <div className="product_flex">
-                <div className="product_title">
+              <div className="center">
+                <div className="product_flex">
+                  <div className="product_title">
+                    {details.detailProductRespDto == null
+                      ? "aa"
+                      : details.detailProductRespDto.title}
+                  </div>
+                  <div className="widthpadding"></div>
+                  <div className="product_status">
+                    {details.detailProductRespDto == null
+                      ? "aa"
+                      : details.detailProductRespDto.best}
+                  </div>
+                  <div className="product_status">
+                    {details.detailProductRespDto == null
+                      ? "aa"
+                      : details.detailProductRespDto.newly}
+                  </div>
+                  <div className="product_status">
+                    {details.detailProductRespDto == null
+                      ? "aa"
+                      : details.detailProductRespDto.sale}
+                  </div>
+                </div>
+                <div className="padding60px"></div>
+                <br />
+                <div className="product_flex">
+                  <div className="product_discounted">
+                    {details.detailProductRespDto == null
+                      ? "aa"
+                      : details.detailProductRespDto.discounted}
+                  </div>
+                  <div className="widthpadding"></div>
+                  <div className="product_price">
+                    <del>
+                      {details.detailProductRespDto == null
+                        ? "aa"
+                        : details.detailProductRespDto.price}
+                    </del>
+                  </div>
+                </div>
+                <br />
+                <div className="disc">
                   {details.detailProductRespDto == null
                     ? "aa"
-                    : details.detailProductRespDto.title}
+                    : details.detailProductRespDto.disc}
                 </div>
-                <div className="widthpadding"></div>
-                <div className="product_status">
-                  {details.detailProductRespDto == null
-                    ? "aa"
-                    : details.detailProductRespDto.best}
+                <br />
+                <div>
+                  <Button
+                    onClick={
+                      details.detailProductRespDto == null
+                        ? "aa"
+                        : cart(details.detailProductRespDto.id)
+                    }
+                    variant="contained"
+                    color="secondary"
+                  >
+                    장바구니
+                  </Button>
                 </div>
-                <div className="product_status">
-                  {details.detailProductRespDto == null
-                    ? "aa"
-                    : details.detailProductRespDto.newly}
+                <div>
+                  <Pay />
                 </div>
-                <div className="product_status">
-                  {details.detailProductRespDto == null
-                    ? "aa"
-                    : details.detailProductRespDto.sale}
-                </div>
-              </div>
-              <div className="padding60px"></div>
-              <div className="product_flex">
-                <div className="product_discounted">
-                  {details.detailProductRespDto == null
-                    ? "aa"
-                    : details.detailProductRespDto.discounted}
-                </div>
-                <div className="widthpadding"></div>
-                <div className="product_price">
-                  {details.detailProductRespDto == null
-                    ? "aa"
-                    : details.detailProductRespDto.price}
-                </div>
-              </div>
-              <div className="disc">
-                {" "}
-                {details.detailProductRespDto == null
-                  ? "aa"
-                  : details.detailProductRespDto.disc}
               </div>
             </Grid>
             <Grid item xs={3}></Grid>

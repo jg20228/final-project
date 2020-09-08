@@ -1,5 +1,6 @@
 import React from "react";
 import { Button, Grid } from "@material-ui/core";
+import styles from "../../css/CSCENTER.css";
 
 const CSCENTER4th = () => {
   return (
@@ -29,7 +30,7 @@ const CSCENTER4th = () => {
         <div className="padding_size40"></div>
       </Grid>
       <Grid item xs={12}>
-        <hr className="line" />
+        <hr />
       </Grid>
       <Grid item xs={12}>
         <div className="flex_box_around">

@@ -1,5 +1,6 @@
 import React from "react";
 import { Button, Grid } from "@material-ui/core";
+import styles from "../../css/CSCENTER.css";
 
 const CSCENTER3rd = () => {
   return (
@@ -37,7 +38,7 @@ const CSCENTER3rd = () => {
         <div className="padding_size40"></div>
       </Grid>
       <Grid item xs={12}>
-        <hr className="line" />
+        <hr />
       </Grid>
       <Grid item xs={12}>
         <p className="sub_title"> 배송료</p>

@@ -5,7 +5,9 @@
 }
 
 .product_flex {
+  font-size: 24px;
   display: flex;
+  justify-content: center;
 }
 
 .review_flex {
@@ -29,4 +31,8 @@
 
 .pro_content {
   width: 100%;
+}
+
+.center {
+  text-align: center;
 }

@@ -28,7 +28,7 @@ const CSCENTER = () => {
             <p> * 버튼을 누르면 자동으로 이동합니다.</p>
           </Grid>
           <Grid item xs={12}>
-            <hr className="line" />
+            <hr />
           </Grid>
           <Grid item xs={12}>
             <CSCENTER1st />
