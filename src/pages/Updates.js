@@ -10,7 +10,6 @@ import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import Axios from "axios";
-import Fileupload from "./Fileupload";
 
 function Copyright() {
   return (
@@ -45,24 +44,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const sendMSG = async () => {
-  console.log("ddd");
-  Axios.post("http://localhost:8080/join", {
-    username: "cos",
-    password: "1234",
-    email: "cos@nate.com",
-    name: "코스",
-    gender: "남",
-    phone: "010-1234-1234",
-    address: "서면",
-    detail_address: "지하상가",
-    birthday: "19991212",
-  })
-    .then(function (response) {
-      console.log(response);
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
+  alert("수정 완료");
 };
 
 export default function SignIn() {
@@ -76,7 +58,7 @@ export default function SignIn() {
           <LockOutlinedIcon />
         </Avatar>
         <Typography component="h1" variant="h5">
-          Sign up
+          User Update
         </Typography>
         <form className={classes.form} noValidate>
           <TextField

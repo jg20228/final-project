@@ -7,6 +7,7 @@ import CSCENTER1st from "../components/Body/CSCENTER1st";
 import CSCENTER2nd from "../components/Body/CSCENTER2nd";
 import CSCENTER3rd from "../components/Body/CSCENTER3rd";
 import CSCENTER4th from "../components/Body/CSCENTER4th";
+import { Link } from "react-router-dom";
 
 const CSCENTER = () => {
   return (
@@ -49,9 +50,15 @@ const CSCENTER = () => {
         </Grid>
         <Grid item xs={12} className="padding_size40"></Grid>
         <Grid item xs={12} className="centerbox">
-          <Button variant="contained" color="primary" href="#contained-buttons">
-            Q&A
-          </Button>
+          <Link to="/mypage/qna">
+            <Button
+              variant="contained"
+              color="primary"
+              href="#contained-buttons"
+            >
+              Q&A
+            </Button>
+          </Link>
         </Grid>
         <Grid item xs={12} className="padding_size40"></Grid>
         <Grid item xs={12} className="padding_size40"></Grid>

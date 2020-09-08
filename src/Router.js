@@ -23,11 +23,13 @@ import PageQnA from "./pages/PageQnA";
 import TermsOfService from "./pages/TermsOfService";
 import PolicyPrivacy from "./pages/PolicyPrivacy";
 import Animal from "./pages/Animal";
+import Test98 from "./detailsTest/Test98";
 
 const Router = () => {
   return (
     <div>
       <Switch>
+        <Route exact path="/write" component={Test98} />
         <Route exact path="/tos" component={TermsOfService} />
         <Route exact path="/pp" component={PolicyPrivacy} />
         <Route exact path="/notice" component={Notice} />

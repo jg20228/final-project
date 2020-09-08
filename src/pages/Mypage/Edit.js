@@ -3,6 +3,7 @@ import MypageTable from "./MypageTable";
 import { Grid } from "@material-ui/core";
 import Side from "./Side";
 import MypageHeader from "./MypageHeader";
+import Updates from "../Updates";
 
 const Edit = () => {
   return (
@@ -16,7 +17,9 @@ const Edit = () => {
           <Grid item className="content" xs={10}>
             <MypageHeader />
             <Grid container className="boxcardtable">
-              <Grid item></Grid>
+              <Grid item>
+                <Updates />
+              </Grid>
             </Grid>
           </Grid>
         </Grid>

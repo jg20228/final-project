@@ -37,6 +37,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const sendMSG = async () => {
+  alert("전송완료");
   Axios.post("http://localhost:8080/about", {
     title: "테스트",
     content: "test1",

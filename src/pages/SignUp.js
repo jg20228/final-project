@@ -44,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const sendMSG = async () => {
-  console.log("ddd");
+  alert("회원가입 완료");
   Axios.post("http://localhost:8080/join", {
     username: "cos",
     password: "1234",
@@ -54,7 +54,7 @@ const sendMSG = async () => {
     phone: "010-1234-1234",
     address: "서면",
     detail_address: "지하상가",
-    birthday: "10001111",
+    birthday: "19990101",
   })
     .then(function (response) {
       console.log(response);
