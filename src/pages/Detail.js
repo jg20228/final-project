@@ -97,11 +97,16 @@ const Detail = () => {
           <Grid container>
             <Grid item xs={2}></Grid>
             <Grid item xs={8}>
-              <div className="product_content">
-                {details.detailProductRespDto == null
-                  ? "aa"
-                  : details.detailProductRespDto.content}
-              </div>
+              <img
+                className="pro_content"
+                src={
+                  details.detailProductRespDto == null
+                    ? "aa"
+                    : MainService.imgRoot() +
+                      details.detailProductRespDto.content
+                }
+                alt=""
+              />
             </Grid>
             <Grid item xs={2}></Grid>
           </Grid>
@@ -154,7 +159,10 @@ const Detail = () => {
                                 </div>
                                 <div className="review_photo">
                                   {row.img}
-                                  <img src={row.img} alt="" />
+                                  <img
+                                    src={"localhost:8080" + row.img}
+                                    alt=""
+                                  />
                                 </div>
                               </div>
                             </Grid>

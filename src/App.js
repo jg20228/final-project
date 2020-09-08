@@ -6,7 +6,6 @@ import Test98 from "./detailsTest/Test98";
 function App() {
   return (
     <div>
-      <Test98 />
       <Header />
       <Router />
       {/* myPage */}

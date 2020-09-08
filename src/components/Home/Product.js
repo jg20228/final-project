@@ -14,14 +14,13 @@ class Product extends React.Component {
       infinite: true,
       autoplay: true,
       speed: 500,
-      slidesToShow: 2,
-      slidesToScroll: 2,
+      slidesToShow: 3,
+      slidesToScroll: 3,
     };
     return (
       <Slider {...settings}>
         {products.map((item) => (
           <div key={item.id}>
-            {item.id}
             <Link to={"/shop/detail/" + item.id} className="img__">
               <img
                 className="img"
@@ -29,7 +28,10 @@ class Product extends React.Component {
                 alt=""
               />
             </Link>
-            <p>{item.price}</p>
+            <div className="center">
+              <p>{item.title}</p>
+              <p>{item.price}</p>
+            </div>
           </div>
         ))}
       </Slider>

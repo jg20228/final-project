@@ -52,14 +52,16 @@ class Homeopy extends Component {
           <Grid item xs={2}></Grid>
           <Grid item xs={8}>
             <Banner banner={banner} />
-            <p>아르아르는 생활용품 안전의 새로운 기준을 만들어 갑니다.</p>
+            <p className="bannerFont">
+              아르아르는 생활용품 안전의 새로운 기준을 만들어 갑니다.
+            </p>
             <div className="padding80px"></div>
             <Grid container>
               <Grid item xs={1}></Grid>
 
               <Grid item xs={5}>
                 <div className="padding80px"></div>
-                <p>Product</p>
+                <p className="Product_font">PRODUCTS</p>
                 <Product products={products} />
               </Grid>
               <Grid item xs={1}></Grid>

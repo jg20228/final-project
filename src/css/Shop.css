@@ -23,5 +23,16 @@
 }
 
 .img__ {
-  width: 100%;
+  width: 80%;
+  margin-bottom: 20px;
+}
+
+.center {
+  text-align: center;
+  margin-right: 100px;
+  margin-bottom: 50px;
+}
+
+.padding_size20 {
+  height: 100px;
 }

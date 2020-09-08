@@ -21,7 +21,6 @@ const Banner = (props) => {
     >
       {banner.map((item) => (
         <div key={item.id}>
-          {item.id}
           <Link to={"/shop/detail/" + item.id} className="img__">
             <img
               className="img__"

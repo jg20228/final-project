@@ -1,6 +1,7 @@
 import React from "react";
 import { Grid } from "@material-ui/core";
 import imgA from "../../images/img4/userProfile.png";
+import styles from "../../css/mypage.css";
 
 const MypageHeader = () => {
   return (

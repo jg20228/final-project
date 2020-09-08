@@ -21,7 +21,7 @@ const Unit = () => {
   }, []);
 
   return (
-    <Grid container>
+    <Grid container direction="row" justify="space-between" alignItems="center">
       <Grid item xs={2}></Grid>
       <Grid item xs={8}>
         <img className="banner" src={shopB} alt="" />
@@ -35,22 +35,27 @@ const Unit = () => {
       <Grid item xs={2}></Grid>
       <Grid item xs={8}>
         <div>
-          <p className="shop_font">Set Products</p>
+          <p className="shop_font">SET PRODUCTS</p>
+          <br />
         </div>
       </Grid>
       <Grid item xs={2}></Grid>
 
       <Grid item xs={2}></Grid>
       <Grid item xs={8}>
-        <hr className="line" />
+        <hr />
       </Grid>
       <Grid item xs={2}></Grid>
 
+      <Grid item xs={12}>
+        <div className="padding_size60"></div>
+      </Grid>
+
       <Grid item xs={2}></Grid>
-      <Grid item xs={8}>
+      <Grid item xs={8} justify="space-between" alignItems="center">
         <Grid container>
           {shopData.map((item) => {
-            if (item.categoryId === 1) {
+            if (item.categoryId === 2) {
               return (
                 <Grid item xs={4} key={item.id}>
                   <Link to={"/shop/detail/" + item.id}>
@@ -60,7 +65,10 @@ const Unit = () => {
                       alt=""
                     />
                   </Link>
-                  <p>{item.price}</p>
+                  <div className="center">
+                    <p>{item.title}</p>
+                    <p>{item.price}</p>
+                  </div>
                 </Grid>
               );
             }
@@ -77,21 +85,27 @@ const Unit = () => {
       <Grid item xs={8}>
         <div>
           <p className="shop_font">SINGLE PRODUCTS</p>
+          <br />
         </div>
       </Grid>
+
       <Grid item xs={2}></Grid>
 
       <Grid item xs={2}></Grid>
       <Grid item xs={8}>
-        <hr className="line" />
+        <hr />
       </Grid>
       <Grid item xs={2}></Grid>
+
+      <Grid item xs={12}>
+        <div className="padding_size60"></div>
+      </Grid>
 
       <Grid item xs={2}></Grid>
       <Grid item xs={8}>
         <Grid container>
           {shopData.map((item) => {
-            if (item.categoryId === 2) {
+            if (item.categoryId === 1) {
               return (
                 <Grid item xs={4} key={item.id}>
                   <Link to={"/shop/detail/" + item.id}>
@@ -101,7 +115,10 @@ const Unit = () => {
                       alt=""
                     />
                   </Link>
-                  <p>{item.price}</p>
+                  <div className="center">
+                    <p>{item.title}</p>
+                    <p>{item.price}</p>
+                  </div>
                 </Grid>
               );
             }
